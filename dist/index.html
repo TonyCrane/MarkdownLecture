@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset=UTF-8><title>Markdown 教学 - By MSC</title><link rel=stylesheet href=https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=https://cdn.staticfile.org/prism/1.15.0/themes/prism.min.css><link rel=stylesheet href=https://cdn.staticfile.org/KaTeX/0.10.0-rc.1/katex.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro&amp;family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css><link rel=stylesheet href=style.css><link href=./css/chunk-vendors.4e4765ff.css rel=stylesheet><link rel=icon href=favicon.png></head><body><div><article id=webslides><section slide class=slide :class="aligncenter size-70"><div class="wrap aligncenter size-70" wrap=true><link rel=stylesheet href=style.css><h1 class=text-shadow>Markdown 教学</h1><hr><p class=text-intro>By 王鹤翔（MSC）</p><p><a href=https://github.com/TonyCrane/MarkdownLecture class="button ghost" target=_blank><i class="fa fa-github"></i> Github</a></p></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><h1>什么是 markdown</h1><hr><div class="bg-white shadow"><ul class="flexblock reasons"><li><p>轻量级文本标记语言（markup language）</p></li><li><p>纯文本编写带格式文档</p></li><li><p>可以转为 HTML（映射到 HTML 的子集）</p></li><li><p>方便、简单、用途多</p></li></ul></div></div></section><section slide class=slide :class=size-70><div class="wrap size-70" wrap=true><div class=content-left><h1>历史</h1><hr><ul><li>2004 年 John Gruber 发布了第一个 markdown 语法手册和 perl 语言写的转换器</li><li>以易读易写为目标，成为电子邮件标记格式惯例</li><li>2016 年正式注册了 CommonMark（标准化）、GFM（GitHub 风格）等变体</li><li>……</li></ul></div><div class="content-right text-quote"><br><br><blockquote><p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible. <cite>John Gruber</cite></p></blockquote></div></div></section><section slide class=slide :class=size-50><div class="wrap size-50" wrap=true><h1>语法</h1><hr><ul><li>John Gruber 的 markdown 语法，简单直接，但不细致<ul><li><a href=https://daringfireball.net/projects/markdown target=_blank>daringfireball.net/projects/markdown</a></li></ul></li><li>CommonMark 标准，明确细节<ul><li><a href=https://spec.commonmark.org/0.30/ target=_blank>spec.commonmark.org</a></li></ul></li><li>各个网站、软件有自己的语法标准、扩展语法<ul><li>GitHub GFM 标准 <a href=https://github.github.com/gfm/ target=_blank>github.github.com/gfm</a>（改自 CommonMark）</li><li>Typora <a href=https://support.typora.io/ target=_blank>support.typora.io</a>（改自 CommonMark）</li><li>Pandoc 标准 <a href=https://pandoc.org/MANUAL.html#pandocs-markdown target=_blank>pandoc.org/MANUAL.html</a></li><li>……</li></ul></li></ul></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><h1>常用软件</h1><hr><ul><li>Typora，经典流行，但付费，语法改自 CommonMark 标准<ul><li><a href=https://typora.io/ target=_blank>typora.io</a></li></ul></li><li>MarkText，新兴编辑器，开源，支持 CommonMark、GFM、部分 Pandoc<ul><li><a href=https://github.com/marktext/marktext target=_blank><i class="fa fa-github"></i> marktext/marktext</a></li></ul></li><li>VSCode，自带预览，可以通过插件达到更好效果<ul><li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one" target=_blank>Markdown All in One</a></li><li><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target=_blank>Markdown Preview Enhanced</a>（推荐）</li></ul></li><li>notion、幕布、飞书等笔记软件</li><li>……</li></ul></div></section><section slide class=slide :class="size-60 aligncenter"><div class="wrap size-60 aligncenter" wrap=true><h1>语法讲解</h1><hr></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>标题</h1><hr><ul><li>井号 # 开头，后接内容</li><li>井号与标题间至少一个空格</li><li>只有 1～6 级标题，7 及以上不会变成标题格式</li><li>转为 html 利用 h1 ~ h6 tag</li><li>内容后面可以接任意多 # 来 ”闭合“</li><li>可以跨过某一级，但请明确好层级关系</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题</span>
+<span class="token title important"><span class="token punctuation">#####</span> 五级标题</span>
+<span class="token title important"><span class="token punctuation">######</span> 六级标题</span>
+</code></pre><pre class=language-html><code class=language-html><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>一级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>二级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>三级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>四级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">></span></span>五级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span>六级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>*标题（Setext）</h1><hr><ul><li>使用 # 的称为 ATX 样式</li><li>markdown 支持另一种称为 Setext 样式的标题</li><li>文字下方加任意多 = 表示一级标题</li><li>文字下方加任意多 - 表示二级标题</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token title important">一级标题
+<span class="token punctuation">=======</span></span>
+
+<span class="token title important">二级标题
+<span class="token punctuation">-------</span></span>
+</code></pre><pre class=language-html><code class=language-html><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>一级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>二级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>引言</h1><hr><ul><li>一个 &gt; 加一个空格后接内容</li><li>内部可以嵌套使用 markdown 语法<ul><li>可以嵌套任意多层引言</li></ul></li><li>连续的 &gt; 行属于同一个引言块</li><li>需要一个空行来退出环境</li><li>软件里一般使用一次 enter 退出一层</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token blockquote punctuation">></span> <span class="token title important"><span class="token punctuation">##</span> Quote</span>
+<span class="token blockquote punctuation">></span> 第二行
+<span class="token blockquote punctuation">> ></span> 第二层
+<span class="token blockquote punctuation">></span> 
+<span class="token blockquote punctuation">></span> 回到第一层
+
+退出引言
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>无序列表</h1><hr><ul><li><code>- + *</code> 后接一个空格然后接内容</li><li>同一个层级的符号要相同</li><li>如果一个项中要包含内容，需要换一行然后加一次缩进</li><li>嵌套列表直接缩进一次即可</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token list punctuation">-</span> node 1
+<span class="token list punctuation">-</span> node 2
+
+  content in node 2
+<span class="token list punctuation">-</span> node 3
+
+<span class="token list punctuation">*</span> 第一层
+    <span class="token list punctuation">+</span> 第二层
+        <span class="token list punctuation">*</span> 第三层
+    <span class="token list punctuation">+</span> 第二层
+<span class="token list punctuation">*</span> 第一层
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>有序列表</h1><hr><ul><li>数字加点 后接空格 再接内容<ul><li>也可以数字加 ) 后接空格 再接内容</li></ul></li><li>标准的 md 完全无视数字内容，所有有序列表都从 1 开始计数</li><li>但一般软件都会处理起始数字</li><li>有序列表可以和无序列表互相嵌套</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token list punctuation">1.</span> node 1
+<span class="token list punctuation">2.</span> node 2
+<span class="token list punctuation">4.</span> node 3
+<span class="token list punctuation">1.</span> node 4
+
+<span class="token list punctuation">1.</span> 有序 
+    <span class="token list punctuation">-</span> 嵌套无序
+    <span class="token list punctuation">-</span> 嵌套无序
+<span class="token list punctuation">2.</span> 有序
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>分割线</h1><hr><ul><li>使用 <code>* - _</code> 中任意一个字符重复至少三次</li><li>可以有空格分隔，甚至组织成不同样式</li><li>被转换为 html 中的 &lt;hr/&gt;</li><li>分割线上下最好都加空行</li><li>特别记住 - 分割线上方不要有文字（Setext 标题）</li></ul></div><div class=content-right><pre class=language-text><code class=language-text>***
+
+---
+
+___
+
+* * *
+_  __  _  __
+
+----------------
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>代码块</h1><hr><ul><li>空行加一个缩进创建一个代码块</li><li>被转为 html 中 &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</li><li>内部被原样展现</li><li>软件不会进行代码高亮</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown>code block:
+
+<span class="token code keyword">    print("hello world")
+    # line 2</span>
+
+out
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>代码块</h1><hr><ul><li>使用三个或以上 ` 或 ~ 围起来构成代码块</li><li>` 或 ~ 后面可以加语言名称<ul><li>带有高亮支持的软件会对其进行高亮显示</li><li>不加（或加 text）不进行高亮</li></ul></li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token code"><span class="token punctuation">```</span><span class="token code-language">c</span>
+<span class="token code-block">#include &lt;stdio.h>
+
+int main() {
+    printf("hello world\n");
+    return 0;
+}</span>
+<span class="token punctuation">```</span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>行内标记</h1><hr><ul><li>格式见右侧，* 和 _ 等效</li><li>下划线无 markdown 语法，可以直接使用 html 的 &lt;u&gt; tag 来实现</li><li>行内标记都可以互相嵌套<ul><li>也可以嵌套在其它块中</li><li>行内代码中不行</li></ul></li><li>最好在标记左右均加空格</li><li>文字中使用 * 建议加上 \ 转义</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体</span><span class="token punctuation">*</span></span> <span class="token italic"><span class="token punctuation">_</span><span class="token content">也是斜体</span><span class="token punctuation">_</span></span> \*这不是斜体\*
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">粗体</span><span class="token punctuation">**</span></span> <span class="token bold"><span class="token punctuation">__</span><span class="token content">也是粗体</span><span class="token punctuation">__</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">粗斜体</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span> <span class="token bold"><span class="token punctuation">__</span><span class="token content"><span class="token italic"><span class="token punctuation">_</span><span class="token content">也是粗斜体</span><span class="token punctuation">_</span></span></span><span class="token punctuation">__</span></span>
+<span class="token code-snippet code keyword">`行内代码`</span>
+<span class="token strike"><span class="token punctuation">~~</span><span class="token content">删除线</span><span class="token punctuation">~~</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>
+</code></pre><pre class=language-html><code class=language-html><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>斜体<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>粗体<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span>行内代码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>图片</h1><hr><ul><li>感叹号-方括号-圆括号结合的形式</li><li>图片名可以省略</li><li>位置可以是链接，也可以是本地文件路径</li><li>md 语法插入图片无法调大小，使用 html img 的 style 可以调节</li><li>软件一般可以帮你保存图片到某一目录</li><li>记住图片不会嵌入 md 文件中，要交给别人 md 文件的话请附带上所有素材文件</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token url"><span class="token operator">!</span>[<span class="token content">图片名</span>](<span class="token url">图片位置</span>)</span>
+![](图片位置)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图片位置<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图片名<span class="token punctuation">"</span></span> 
+    <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">...</span><span class="token punctuation">"</span></span></span><span class="token punctuation">/></span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>链接</h1><hr><ul><li>方括号-圆括号组合</li><li>文字是要显示的内容，链接附加在其上</li><li>文字中可以嵌套行内标记格式</li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown><span class="token url">[<span class="token content">文字</span>](<span class="token url">链接</span>)</span>
+</code></pre><pre class=language-html><code class=language-html><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>链接<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre></div></div></section><section slide class=slide :class=size-50><div class="wrap size-50" wrap=true><h1>内连 HTML</h1><hr><ul><li>markdown 中一般可以直接使用 html 语法和 css 样式</li><li>解析器会原封不动的保留 html 内容</li><li>文本中使用 &lt;tag&gt; 这样的字样需要用 \ 转义</li><li>GitHub（GFM）仅支持少量 html，且不支持 css 样式</li><li>html 语法不赘述</li></ul></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>表格</h1><hr><ul><li>不在标准中，但一般这样使用</li><li>每个单元格的内容用 | 分开<ul><li>内容中使用 | 要用 \ 转义</li></ul></li><li>第二行一定要有，规定整列对齐方式<ul><li><code>|--|</code> 或 <code>|:--|</code> 左对齐</li><li><code>|--:|</code> 右对齐</li><li><code>|:--:|</code> 居中对齐</li><li><code>-</code> 的个数随意</li></ul></li><li>仅可以处理简单表格，复杂的用 html 插入</li><li>推荐 <a href=https://www.tablesgenerator.com/ target=_blank>tablesgenerator.com</a></li></ul></div><div class=content-right><pre class=language-markdown><code class=language-markdown>|表头|表头|表头|
+|:--|:--:|--:|
+|居左|居中|居右|
+|...|...|...|
+</code></pre><table><thead><tr><th style=text-align:left>表头</th><th style=text-align:center>表头</th><th style=text-align:right>表头</th></tr></thead><tbody><tr><td style=text-align:left>居左</td><td style=text-align:center>居中</td><td style=text-align:right>居右</td></tr><tr><td style=text-align:left>...</td><td style=text-align:center>...</td><td style=text-align:right>...</td></tr></tbody></table></div></div></section><section slide class=slide :class=size-50><div class="wrap size-50" wrap=true><h1>更细致的文档？</h1><hr><ul><li>CommonMark 标准：<a href=https://spec.commonmark.org/0.30 target=_blank>spec.commonmark.org</a></li><li>对应软件、解析器的文档</li><li><s>没啥好看的，能用就行</s></li></ul></div></section><section slide class=slide :class=size-60><div class="wrap size-60" wrap=true><div class=content-left><h1>有什么用？</h1><hr><ul><li>写 README、写文档</li><li>写笔记、写实验报告、写论文</li><li>写网站内容<ul><li>博客：hexo</li><li>文档：mkdocs</li></ul></li><li>甚至写这个幻灯片</li></ul></div><div class=content-right><h1>怎么能更好看？</h1><hr><ul><li>自己写 css 样式</li><li>找别人写好的样式<ul><li>仿 LaTeX typora 主题：<br><a href=https://github.com/Keldos-Li/typora-latex-theme target=_blank><i class="fa fa-github"></i> Keldos-Li/typora-latex-theme</a></li><li>GitHub 上有很多各种软件的主题</li></ul></li></ul></div></div></section><section slide class=slide :class="size-60 aligncenter"><div class="wrap size-60 aligncenter" wrap=true><h1 class=text-shadow>结</h1><hr><p class=text-landing>Thanks for watching</p><p>学习愉快(￣▽￣)</p></div></section></article></div><script src=https://cdn.staticfile.org/echarts/4.8.0/echarts.min.js></script><script>window.pluginsOptions = {}
+
+
+
+    window.webslidesOptions = {}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let isPrintMode = false;
+    if(~location.search.indexOf('print-pdf')){
+        isPrintMode = true;
+        WebSlides.registerPlugin('scroll', function(){});
+    }
+    const wsOptions = {
+        loop: false
+    };
+    if(window.webslidesOptions){
+        for (let i in webslidesOptions){
+            if(webslidesOptions.hasOwnProperty(i)){
+                wsOptions[i] = webslidesOptions[i];
+            }
+        }
+    }
+    const ws = new WebSlides(wsOptions)
+
+    window.wsInstance = ws;
+    if(isPrintMode){
+        ws.slides.forEach(s=>s.show())
+    }
+}, false)</script><script src=./js/chunk-vendors.js></script><script src=./js/index.js></script></body></html>
